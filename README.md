@@ -10,6 +10,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 ## Index
 
 - [Doctype](#doctype)
+- [HTML Syntax](#html-syntax)
 - [Anchors](#anchors)
 - [Forms](#forms)
 - [Tabular Data - Tables](#tables)
@@ -29,9 +30,16 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 <!-- DO -->
 
-<!DOCTYPE HTML5>
+<!DOCTYPE html>
 (HTML5 doctype)
 ```
 
 
 > (1) Find email guidelines [here](http://static.mlstatic.com/org-img//Manual/ManualEmails/index.html)
+
+> Related articles:
+
+> - [HTML5 Doctype article](http://ejohn.org/blog/html5-doctype/) (John Resig's Blog)
+
+> - [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
+
