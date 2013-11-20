@@ -5,10 +5,7 @@ MercadoLibre HTML Style Guide
 
 ## Overview
 
-The main goal of this style guide is provide comprehensive guidelines to write valid, robust, and semantic html.
-
-
-> "Comment"
+The main goal of this style guide is to provide comprehensive guidelines to write valid, robust, and semantic html.
 
 ## Index
 
