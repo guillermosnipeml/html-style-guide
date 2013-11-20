@@ -17,7 +17,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 ## Doctype
 
-- We use HTML5 across all our pages EXCEPT for emails(1). Always use HTML5 doctype: 
+- We use HTML5 across all our pages EXCEPT for emails(1), so when coding html that for our sites always use HTML5 doctype: 
 
 ```html
 <!-- DON'T -->
