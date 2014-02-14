@@ -50,7 +50,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 ```html
 <!-- DON´T -->
 
-<!-- You must not use mixed caps for tags names or attributes. Always use small caps -->
+<!-- You must not use mixed caps for tags names or attributes. -->
 <iNPut ... />
 
 <!-- HTML tags must be always closed -->
@@ -58,6 +58,8 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 <!-- Avoid the boolean attribute syntax -->
 <input type="checkbox" name="myCheck" checked>
+
+
 <!-- DO -->
 
 <!-- Use small caps for html tags attributes and everything else, EXCEPT doctype -->
