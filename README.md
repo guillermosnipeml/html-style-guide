@@ -49,4 +49,8 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 ```html
 <!-- DON´T -->
+
+<!-- You must not use mixed caps for tags names or attributes. Always use small caps -->
+<iNPut ... />
+
 ```
