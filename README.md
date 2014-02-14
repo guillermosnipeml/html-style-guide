@@ -59,6 +59,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 <!-- Avoid the boolean attribute syntax -->
 <input type="checkbox" name="myCheck" checked>
 <!-- DO -->
+
 <!-- Use small caps for html tags attributes and everything else, EXCEPT doctype -->
 <input ....>
 
