@@ -78,6 +78,6 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 <textarea>My text here</textarea>
 
-<!-- Write your attributes following this sintax: attribute:"value" (Yes, double quoutes) -->
+<!-- Write your attributes following this sintax: attribute:"value" -->
 <input type="checkbox" name="myCheck" checked="checked">
 ```
