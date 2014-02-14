@@ -53,4 +53,6 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 <!-- You must not use mixed caps for tags names or attributes. Always use small caps -->
 <iNPut ... />
 
+<!-- HTML tags must be always closed -->
+<br> 
 ```
