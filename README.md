@@ -55,4 +55,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 <!-- HTML tags must be always closed -->
 <br> 
+
+<!-- Avoid the boolean attribute syntax -->
+<input type="checkbox" name="myCheck" checked>
 ```
