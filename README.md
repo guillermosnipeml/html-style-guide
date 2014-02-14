@@ -43,3 +43,37 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 > - [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
 
+## Syntax
+
+- We use XHTML syntax to ensure well formed code and backwards compatibility. 
+
+<!-- DON´T -->
+
+<!-- You must not use mixed caps for tags names or attributes. Always use small caps -->
+<iNPut ... />
+
+<!-- HTML tags must be always closed -->
+<br> 
+
+<!-- Avoid the boolean attribute syntax -->
+<input type="checkbox" name="myCheck" checked>
+
+<!-- DO -->
+
+<!-- Use small caps for html tags attributes and everything else, EXCEPT doctype -->
+<input ....>
+
+<!-- Close your html elements. ALWAYS -->
+
+<br />
+<img src="myimage.png" alt="myimage" />
+<input type="radio" name="myRadio" />
+
+<a href="#">Click here</a>
+<strong>My bold text</strong>
+<textarea>My text here</textarea>
+
+
+<!-- Write your attributes following this sintax: attribute:"value" (Yes, double quoutes) -->
+
+<input type="checkbox" name="myCheck" checked="checked">
