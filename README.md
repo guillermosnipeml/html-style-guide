@@ -315,13 +315,13 @@ IE8 does not recognize the new HTML5 elements (article, section, etc.), so you m
 <a href="#rel">`rel`</a>
 
 
-### Basic implement
+### Basic implementation
 Specific `href` and `title` attributes
 ```html
 <a href="https://github.com/mercadolibre/html-style-guide" title="Go to html style guide" >html-style-guide</a>
 ```
 
-### Implement data attributes
+### Implementing data attributes
 ```html
 <a href="http://url.original" data-some-data="sting-data" title="link with data attr"></a>
 ```
