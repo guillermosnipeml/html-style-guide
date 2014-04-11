@@ -82,7 +82,8 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 <input type="checkbox" name="myCheck" checked="checked">
 ```
 
-###Elements
+## New HTML5 markup tags
+
 The HTML5 markup incorporates some new tags designed to make web pages structure more logical and functional.
 http://www.w3.org/TR/html5/dom.html#elements
 *Always use the class of the element 
