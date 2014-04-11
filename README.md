@@ -11,7 +11,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 - [Doctype](#doctype)
 - [HTML Syntax](#syntax)
-- [New HTML5 markup tags](#new html5 markup tags)
+- [New HTML5 markup tags](#new-html5-markup-tags)
 - [Anchors](#anchors)
 - [Forms](#forms)
 - [Lists](#lists)
