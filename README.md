@@ -282,7 +282,7 @@ Represents the bottom of a section with information about the page/section that 
 ![Alt text](/files/structure-html5.png "Basic structure of elements in MeLi")
 
 ### Use HTML5 Shiv
-IE does not recognize the new HTML5 elements (article, section, etc.)
+IE8 does not recognize the new HTML5 elements (article, section, etc.), so you must include the HTML5 Shiv script as shown below, if you want to support IE8:
 ````html
 <!-- The HTML5 Shiv (https://github.com/aFarkas/html5shiv) -->
 <!--[if lt IE 9]>
