@@ -507,7 +507,7 @@ __Inputs__
 * `formmethod` - A *String* define which method (get/post) should be used when submitting. __It overrides the form method__, if defined. *(only applies for type image or submit, when the form attribute has been set)*
 * `formaction` - A *String* define the URI should be used to processes the information. __It overrides the form action__, if defined. *(only applies for type image or submit, when the form attribute has been set)*
 
-[Browser compatibility](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)
+[Check Browser Compatibility of this feature](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)
 
 ### New attributes values
 
@@ -518,7 +518,7 @@ __Inputs__
 >For `accept` attr *(if type attr is `file`)*  
 >`audio` `image` `video`
 
-[Browser compatibility](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)
+[Check Browser Compatibility of this feature](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)
 
 ### Good practices
 
