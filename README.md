@@ -296,7 +296,7 @@ IE8 does not recognize the new HTML5 elements (article, section, etc.), so you m
 * Defines an anchor and can be used as a link to another document, such as a marker, or both.
 
 
-### Attibutes
+### Attributes
 <a href="#href">`href`</a>
 <a href="#title">`title`</a>
 <a href="#id">`id`</a>
@@ -382,7 +382,7 @@ Or
 ```
 
 
-### Attibutes desription
+### Attributes description
 
 #### Target
 <span id="target"></span>
@@ -623,7 +623,7 @@ name: <input type="text">
 ```
 
 
-### New attibutes
+### New attributes
 
 * `autocomplete` - *(only if the type attr isn't `hidden` `checkbox` `radio` `file` or button type `button` `submit` `reset` `image`)*
 * `pattern` - A regular expression. Validate the input content when is used with tel, search, url, and email input types
@@ -640,7 +640,7 @@ __Inputs__
 
 [Browser compatibility](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)
 
-### New attibutes values
+### New attributes values
 
 
 >For `type` attr  
