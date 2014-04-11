@@ -10,7 +10,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 ## Index
 
 - [Doctype](#doctype)
-- [HTML Syntax](#html-syntax)
+- [HTML Syntax](#syntax)
 - [Anchors](#anchors)
 - [Forms](#forms)
 - [Lists](#lists) 
