@@ -11,6 +11,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 - [Doctype](#doctype)
 - [HTML Syntax](#syntax)
+- [HTML Elements](#elements)
 - [Anchors](#anchors)
 - [Forms](#forms)
 - [Lists](#lists) 
