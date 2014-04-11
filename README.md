@@ -43,6 +43,8 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 > - [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
 
+
+
 > [Go back to Style guide index](#index) 
 
 ## Syntax
