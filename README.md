@@ -13,7 +13,6 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 - [HTML Syntax](#html-syntax)
 - [Anchors](#anchors)
 - [Forms](#forms)
-- [Tabular Data - Tables](#tables)
 - [Lists](#lists) 
 
 ## Doctype
@@ -640,7 +639,7 @@ __Inputs__
 
 [Browser compatibility](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)
 
-## New attibutes values
+### New attibutes values
 
 
 >For `type` attr  
@@ -668,7 +667,7 @@ Used to enumerate(list) information, which determines the type of list used.
 - `<ol>` - orderer list
 - `<dl>` - description list
 
-#### Unorderer Lists
+#### Unordered Lists
 
 Used to list information that does not require a particular order.
 
@@ -688,7 +687,7 @@ Result
 * Transferencia bancaria
 
 
-#### Orderer Lists
+#### Ordered Lists
 
 Used to list items that need an order.
 
