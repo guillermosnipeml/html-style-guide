@@ -1,7 +1,7 @@
-html-style-guide
+MercadoLibre HTML Style Guide
 ================
 
-MercadoLibre HTML Style Guide
+This style guide will guide you follow through the standards of the code used among our web pages. If you notice that some important info is missing, or you want to contribute with it, just let us know.
 
 ## Overview
 
