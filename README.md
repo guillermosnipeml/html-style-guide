@@ -18,13 +18,6 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 - Use HTML5 doctype across all our pages EXCEPT for emails(1): 
 
 ```html
-<!-- DON'T -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-(XHTML 1.0 Transitional doctype)
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-(HTML 4.01 Transitional doctype)
-
 <!-- DO -->
 
 <!DOCTYPE html>
