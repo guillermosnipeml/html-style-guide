@@ -1,13 +1,10 @@
 MercadoLibre HTML Style Guide
 ================
-
-This style guide will guide you follow through the standards of the code used among our web pages. If you notice that some important info is missing, or you want to contribute with it, just let us know.
-
 ## Overview
 
 The main goal of this style guide is to provide comprehensive guidelines to write valid, robust, and semantic html.
 
-## Index
+## Table of Contents
 
 - [Doctype](#doctype)
 - [HTML Syntax](#syntax)
@@ -18,7 +15,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 ## Doctype
 
-- We use HTML5 across all our pages EXCEPT for emails(1), so when coding html for our sites always use HTML5 doctype: 
+- Use HTML5 doctype across all our pages EXCEPT for emails(1): 
 
 ```html
 <!-- DON'T -->
@@ -45,7 +42,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 
 
-> [Go back to Style guide index](#index) 
+> [Go back to Summary](#table-of-contents) 
 
 ## Syntax
 
@@ -85,7 +82,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 <!-- Write your attributes following this sintax: attribute:"value" -->
 <input type="checkbox" name="myCheck" checked="checked">
 ```
-> [Go back to Style guide index](#index) 
+> [Go back to Summary](#table-of-contents) 
 
 
 ## New HTML5 markup tags
@@ -296,7 +293,7 @@ IE8 does not recognize the new HTML5 elements (article, section, etc.), so you m
     <script src="http://static.mlstatic.com/org-img/ch/vendor/html5shiv/html5shiv-3.7.0.js"></script>
 <![endif]-->
 ````
-> [Go back to Style guide index](#index) 
+> [Go back to Summary](#table-of-contents) 
 
 ## Anchors
 
@@ -416,7 +413,7 @@ http://www.w3.org/TR/html4/types.html#h-6.16
 http://stackoverflow.com/questions/4964130/target-blank-vs-target-new
 http://www.w3.org/html/wg/drafts/html/master/Overview.html
 
-> [Go back to Style guide index](#index) 
+> [Go back to Summary](#table-of-contents) 
 
 ## Forms
 
@@ -667,7 +664,7 @@ name: <input type="text">
 *[http://www.tutorialspoint.com/html5/](http://www.tutorialspoint.com/html5/)*
 *[http://html5doctor.com/](http://html5doctor.com/)*
 
-> [Go back to Style guide index](#index) 
+> [Go back to Summary](#table-of-contents) 
 
 
 ## Lists
@@ -743,4 +740,4 @@ Result
 ···· ···· 1 vendido
 
 
-> [Go back to Style guide index](#index) 
+> [Go back to Summary](#table-of-contents) 
