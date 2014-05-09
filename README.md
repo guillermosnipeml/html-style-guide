@@ -9,7 +9,7 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 - [Doctype](#doctype)
 - [HTML Syntax](#syntax)
 - [New HTML5 markup tags](#new-html5-markup-tags)
-- [Anchors](#anchors)
+- [Links](#links)
 - [Forms](#forms)
 - [Lists](#lists)
 
@@ -39,27 +39,26 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 ## Syntax
 
-- We use XHTML syntax to ensure well formed code and backwards compatibility. 
+- Use XHTML syntax to ensure well formed code and backwards compatibility.
+
+- Use small caps for html tags attributes and everything else, EXCEPT doctype
 
 ```html
 <!-- DON´T -->
-
-<!-- You must not use mixed caps for tags names or attributes. -->
 <iNPut ... />
 
-<!-- HTML tags must be always closed -->
-<br> 
-
-<!-- Avoid the boolean attribute syntax -->
-<input type="checkbox" name="myCheck" checked>
-
-
 <!-- DO -->
-
-<!-- Use small caps for html tags attributes and everything else, EXCEPT doctype -->
 <input ....>
 
-<!-- Close your html elements. ALWAYS -->
+```
+
+- Close your html elements. ALWAYS
+
+```html
+<!-- DON´T -->
+<br>
+
+<!-- DO -->
 <br />
 
 <img src="myimage.png" alt="myimage" />
@@ -72,21 +71,28 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 <textarea>My text here</textarea>
 
-<!-- Write your attributes following this sintax: attribute:"value" -->
+```
+
+- Write your attributes following this sintax: attribute:"value"
+
+```html
+<!-- DON´T -->
+<input type="checkbox" name="myCheck" checked>
+
+<!-- DO -->
 <input type="checkbox" name="myCheck" checked="checked">
 ```
-> [Go back to Summary](#table-of-contents) 
+
+[Go back to summary](#table-of-contents)
 
 
 ## New HTML5 markup tags
 
 The HTML5 markup incorporates some new tags designed to make web pages structure more logical and functional.
-http://www.w3.org/TR/html5/dom.html#elements
-*Always use the class of the element 
-*Use ARIA attribute
+
 
 ####Header
-Represents the header of a section, and it is assumed to be given more importance than the rest, especially if the section is an ítem.
+Represents the header of a section, and it is assumed to be given more importance than the rest, especially if the section is an item.
 
 
 ````html
@@ -131,30 +137,32 @@ Represents a section dedicated to the navigation of the site.
 <!-- DO -->
 <nav class="ml-navigation" role="navigation">
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/about/">About</a></li>
+        <li><a href="#">Item of menu</a></li>
     </ul>
 </nav>
+
+<nav class="ml-navigation" role="navigation">
+    <a href="#">Item of menu</a>
+</nav>
+
 ````
 ####Article
 Allows to declare a part of the content which is independent of this, such as reviews.
 *Use in the Main
 ````html
 <!-- DO -->
-<article class="review" itemprop="review" itemscope itemtype="http://schema.org/Review">
+<article class="review">
     <header>
-        <h4 itemprop="name">
+        <h4>
             Excellent product
         </h4>
-        by <a href="/user/..." itemprop="author">USERNAME...</a>
-        <span class="reviewRating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-            <meta itemprop="worstRating" content="1">
-            <span itemprop="ratingValue">5</span>
-            <meta itemprop="bestRating" content="5">
+        by <a href="/user/...">USERNAME...</a>
+        <span class="reviewRating">
+            5
         </span>
-        <time itemprop="datePublished" datetime="2013-08-29T13:58Z">August 29th, 2013 at 13:58</time>
+        <time datetime="2013-08-29T13:58Z">August 29th, 2013 at 13:58</time>
     </header>
-    <p itemprop="description">Review content ...</p>
+    <p>Review content ...</p>
 </article>
 ````
 ####Section
@@ -165,54 +173,30 @@ Represents a general section inside a document or an application.  It can contai
     <h2>Promotions</h2>
     <p>Promo description</p>
 </section>
+
+<section>
+    <section>Promotions 1</section>
+    <section>Promotions 2</section>
+</section>
 ````
 
 ####Aside
 It is essential to define the “important content" from the “support content", giving more importance to the first that the second.
 
 ````html
+<!-- DON´T -->
+<section class="main-content">
+    <article>...</article>
+</section>
+<section class="aux-content"></section>
+
 <!-- DO -->
+<section class="content"> </section>
 <aside>
-    <h2>Blogroll</h2>
-    <ul>
-        <li><a href="#">My Friend</a></li>
-        <li><a href="#">My Other Friend</a></li>
-        <li><a href="#">My Best Friend</a></li>
-    </ul>
+    <span>Your purchase is protected. <a href="">See conditions</a>.</span>
 </aside>
 ````
 
-The content of the ```` aside ```` element is related directly with the article.
-````html
-<!-- DO -->
-<article>
-    <h2>My Blog Post</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <aside>
-        <h3>Glossary</h3>
-        <p>ipsum dolor sit amet</p>
-    </aside>
-</article>
-````
-
-The ```` aside ```` element can be out of the article. Its content is related to the page, but not so closely to the article.
-````html
-<!-- DO -->
-<article>
-    <h2>Products Apple</h2>
-    <p>The <b>apple</b> is the pomaceous fruit of the apple tree...</p>
-    ...
-</article>
-<aside>
-    <h3>Oder products</h3>
-    <ul>
-        <li><a href="#">AMD</a></li>
-        <li><a href="#">Intel</a></li>
-        ...
-    </ul>
-</aside>
-````
 ####Footer
 Represents the bottom of a section with information about the page/section that has little to do with the content itself but has data like the author, copyright or the year.
 
@@ -229,7 +213,7 @@ Represents the bottom of a section with information about the page/section that 
 
 ````html
 <!-- DO -->
-<footer class="ml-footer" role="contentinfo">
+<footer>
     <ul>
         <li>copyright</li>
         <li>More information</li>
@@ -260,25 +244,28 @@ Represents the bottom of a section with information about the page/section that 
 </article>
 ````
 
-###Basic structure of elements
+###An example of the basic structure of an html
 ````html
 <!-- DO -->
 <body>
-    <header class="ml-header">
-        <nav class="ml-navigation">...</nav>
+    <header>
+        <nav>...</nav>
     </header>
-    <main class="ml-main" role="main">
+    <main>
         <aside>...</aside>
         <article>
             <section>...</section>
         </article>
     </main>
-    <footer  class="ml-footer">...</footer>
+    <footer>...</footer>
 </body>
 ````
-![Alt text](/files/structure-html5.png "Basic structure of elements in MeLi")
+![Alt text](/files/structure-html5.png "Basic structure")
 
-### Support for IE8
+> [HTML5 elements] (http://www.w3.org/TR/html5/dom.html#elements)
+
+
+### HTML5 support for IE8
 IE8 does not recognize the new HTML5 elements (article, section, etc.), so you must include the HTML5 Shiv script as shown below, if you want to support IE8:
 ````html
 <!-- The HTML5 Shiv (https://github.com/aFarkas/html5shiv) -->
@@ -286,133 +273,78 @@ IE8 does not recognize the new HTML5 elements (article, section, etc.), so you m
     <script src="http://static.mlstatic.com/org-img/ch/vendor/html5shiv/html5shiv-3.7.0.js"></script>
 <![endif]-->
 ````
-> [Go back to Summary](#table-of-contents) 
+[Go back to summary](#table-of-contents)
 
-## Anchors
+## Links
 
-### Description
-* Defines an anchor and can be used as a link to another document, such as a marker, or both.
+#### Anchors
 
+The ```<a>``` tag defines a hyperlink, the most important attribute of the ```<a>``` element is the href attribute.
 
-### Attributes
-<a href="#href">`href`</a>
-<a href="#title">`title`</a>
-<a href="#id">`id`</a>
-<a href="#name">`name`</a>
-<a href="#class">`class`</a>
-<a href="#target">`target`</a>
-<a href="#type">`type`</a>
-<a href="#rel">`rel`</a>
+- The link don't have auto close tag
+- Always specific a title attribute
+- Never use other element if you want link any info
+- Always define a url and prevent it from javascript
 
-
-### Basic implementation
-Specific `href` and `title` attributes
-```html
-<a href="https://github.com/mercadolibre/html-style-guide" title="Go to html style guide" >html-style-guide</a>
-```
-
-### Implementing data attributes
-```html
-<a href="http://url.original" data-some-data="sting-data" title="link with data attr"></a>
-```
-
-### Good Practices
-Anchors don't have auto close tag
 ```html
 <!-- DON'T -->
-<a href="url" title="title-text" />
-```
+<a href="url" />
 
-```html
-<!-- DO -->
-<a href="url" title="title-text"></a>
-```
-
-<a name="title"></a>
-Always specific a title attribute
-```html
-<!-- DON'T -->
-<a href="url"></a>
-```
-
-```html
-<!-- DO -->
-<a href="url" title=""></a>
-```
-
-Never use other element if you want link any info
-```html
 <!-- DON'T -->
 <span id="link" onclick="window.open('url')" ></span>
-```
 
-```html
-<!-- DO -->
-<a href="url" title="title-link" target="_blank"></a>
-```
-
-Always define a url and prevent it from javascript
-```html
 <!-- DON'T -->
 <a href="javscript:void();" ></a>
-```
 
-```html
 <!-- DO -->
 <a href="http://www.url.bla" title="title-link"></a>
 and prevent event on click this
 ```
 
-<a name="id"></a>
-Link info inside our content example
+- Link info inside our content example
+
 ```html
 <a href="#idReference" title="Go to Reference">Go to Reference</a>
 (...our html content...)
 <section id="idReference"></section>
-```
-Or
-<a name="name"></a>
-```html
+
+<!-- Or -->
+
 <a href="#nameReference" title="Go to Reference">Go to Reference</a>
 (...our html content...)
 <a name="nameReference"></a>
 <section id="reference"></section>
 ```
 
+#### Links
 
-### Attributes description
+The ```<link>``` tag it's a void element and specifies relationships between the current document and external resource. This Element is most used, for example, to link to style sheets.
 
-#### Target
-<span id="target"></span>
+_Basic code_
+```html
+<link href="http://url" type="text/css" rel="stylesheet" media="screen" />
+```
+- `href` - specifies the URL of the linked resource
+- `type` - defined the type (MIME type) of the content that has been linked
+- `rel` - names a relationship between the linked document and the current document
+- `media` - specifies the media which the linked resource applies to. Its value must be a _media types and groups_ in HTML4, and extend thist o any kind of _media queries_ in HTML5
 
-######Possible values
+> - [MIME types](http://www.htmlquick.com/es/reference/mime-types.html)
+> - [Anchor attibutes](http://www.htmlquick.com/es/reference/tags/a.html)
+> - [`target` values](http://www.w3.org/TR/html4/types.html#h-6.16)
+> - [Anchors bad implementeation examples](http://line25.com/articles/10-html-tag-crimes-you-really-shouldnt-commit)
+> - [SEO - anchor](http://moz.com/learn/seo/anchor-text)
+> - [Link attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
+> - [`rel` link_types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types)
+> - [`media` values](http://www.w3schools.com/tags/att_link_media.asp)
 
-* `_blank` - *Open linked document in new windows or tab*
-* `_self` - *It's a default, open linked document in the same context*
-* `_parent` - *Open linked document in the parent frame*
-* `_top` - *Open linked document in the top level of current context frame*
-
-
-
-#### Source:
-http://www.htmlquick.com/es/reference/tags/a.html
-http://www.htmlquick.com/es/reference/mime-types.html
-http://www.htmlquick.com/es/reference/types.html#frame-target
-http://stackoverflow.com/questions/11009597/correct-implementation-of-anchor-tag
-http://line25.com/articles/10-html-tag-crimes-you-really-shouldnt-commit
-http://stackoverflow.com/questions/134845/href-attribute-for-javascript-links-or-javascriptvoid0
-http://moz.com/learn/seo/anchor-text
-http://www.w3.org/TR/html4/types.html#h-6.16
-http://stackoverflow.com/questions/4964130/target-blank-vs-target-new
-http://www.w3.org/html/wg/drafts/html/master/Overview.html
-
-> [Go back to Summary](#table-of-contents) 
+[Go back to summary](#table-of-contents)
 
 ## Forms
 
 ### Generic FORM example
 
-#### _Code_
+#### _Basic code_
 ```html
 <form action="/processData.php" method="post">
     <fieldset>
@@ -422,19 +354,11 @@ http://www.w3.org/html/wg/drafts/html/master/Overview.html
             <input id="firstName" name="firstname" type="text">
         </div>
         <div>
-            <label for="lastName">Last name:</label>
-            <input id="lastName" name="lastname" type="text">
-        </div>
-        <div>
             <label for="male">Sex:</label>
             <input id="male" name="sex" value="male" type="radio">
             <label for="male">Male</label>
             <input id="female" name="sex" value="female" type="radio">
             <label for="female">Female</label>
-        </div>
-        <div>
-            <label for="birthDate">Birth date:</label>
-            <input id="birthDate" name="birthdate" type="date">
         </div>
     </fieldset>
     <fieldset>
@@ -444,33 +368,12 @@ http://www.w3.org/html/wg/drafts/html/master/Overview.html
             <input id="someInfo" name="someinfo" type="text">
         </div>
         <div>
-            <label for="selectEg">Select example:</label>
-            <select id="selectEg" name="selecteg">
-                <option>option 1</option>
-                <option>option 2</option>
-                <option>option 3</option>
-                <optgroup label="optgroup 1">
-                    <option>option 4.1</option>
-                    <option>option 4.2</option>
-                    <option>option 4.3</option>
-                </optgroup>
-                <option>option 5</option>
-                <option>option 6</option>
-                <optgroup label="optgroup 2 disabled" disabled><!-- In XHTML, attribute minimization is forbidden, and the disabled attribute must be defined as <optgroup disabled="disabled"> -->
-                    <option>option 7.1</option>
-                    <option>option 7.2</option>
-                    <option>option 7.3</option>
-                    <option>option 7.4</option>
-                </optgroup>
-            </select>
-        </div>
-        <div>
-            <input id="check1" name="checkbox1" value="example1" type="checkbox">
             <label for="check1">checkbox 1:</label>
-            <input id="check2" name="checkbox2" value="example2" type="checkbox">
+            <input id="check1" name="checkbox1" value="example1" type="checkbox">
             <label for="check2">checkbox 2:</label>
-            <input id="check3" name="checkbox3" value="example4" type="checkbox">
+            <input id="check2" name="checkbox2" value="example2" type="checkbox">
             <label for="check3">checkbox 3:</label>
+            <input id="check3" name="checkbox3" value="example4" type="checkbox">
         </div>
     </fieldset>
     <fieldset>
@@ -480,7 +383,6 @@ http://www.w3.org/html/wg/drafts/html/master/Overview.html
     </fieldset>
 </form>
 ```
-
 
 ### New attributes
 
@@ -497,7 +399,9 @@ __Inputs__
 * `formmethod` - A *String* define which method (get/post) should be used when submitting. __It overrides the form method__, if defined. *(only applies for type image or submit, when the form attribute has been set)*
 * `formaction` - A *String* define the URI should be used to processes the information. __It overrides the form action__, if defined. *(only applies for type image or submit, when the form attribute has been set)*
 
-[Check Browser Compatibility of this feature](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)
+>- _[html5doctor](http://html5doctor.com/html5-forms-introduction-and-new-attributes/#attributes)_
+>- _[w3c](http://www.w3.org/TR/html5/forms.html)_
+>- _[Check Browser Compatibility of this feature](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)_
 
 ### New attributes values
 
@@ -657,7 +561,7 @@ name: <input type="text">
 *[http://www.tutorialspoint.com/html5/](http://www.tutorialspoint.com/html5/)*
 *[http://html5doctor.com/](http://html5doctor.com/)*
 
-> [Go back to Summary](#table-of-contents) 
+> [Go back to summary](#table-of-contents)
 
 
 ## Lists
@@ -676,7 +580,7 @@ Used to list information that does not require a particular order.
 Eg. List of payment methods.
 
 html structure
-```
+```html
 <ul>
   <li>MercadoPago<li>
   <li>Efectivo<li>
@@ -714,7 +618,7 @@ This list is recommended for use when the information has a relevant title or co
 It has a title `<dt>` and description `<dd>`.
 
 html structure
-```
+```html
 <dl>
     <dt>Tipo de artículo:</dt>
        <dd>Artículo nuevo</dd>
@@ -732,5 +636,86 @@ Result
 
 ···· ···· 1 vendido
 
+### Good practices
 
-> [Go back to Summary](#table-of-contents) 
+- Use lists to create lists, don`t use other elements to this purpose
+
+```html
+<!-- DON'T -->
+<ul>
+    <!-- simple link -->
+    <li>
+        <a href="#">...</a>
+    </li>
+    <li>
+        <!-- Breadcrumb  -->
+        <span>... &gt;</span>
+        <span>... &gt;</span>
+        <span>... &gt;</span>
+        <span>...</span>
+    </li>
+</ul>
+```
+```html
+<!-- DO -->
+<div>
+    <!-- simple link -->
+    <a href="#">...</a>
+    <ul>
+        <!-- Breadcrumb -->
+        <li>...</li>
+        <li>...</li>
+        <li>...</li>
+        <li>...</li>
+    <ul>
+</div>
+```
+
+- Using the correct type of list, according to the needs of the information
+
+```html
+<!-- DON'T -->
+<ul>
+    <li>
+        <span class="title">...</span>
+        <span class="data">...</span>
+    </li>
+    <li>
+        <span class="title"></span>
+        <span class="data"></span>
+    </li>
+</ul>
+```
+```html
+<!-- DO -->
+<dl>
+    <dt>...<dt>
+    <dd>...</dd>
+    <dt>...<dt>
+    <dd>...</dd>
+</dl>
+```
+
+```html
+<!-- DON'T -->
+<ul>
+    <li>
+        <span class="num">1</span>
+        ...
+    </li>
+    <li>
+        <span class="num">2</span>
+        ...
+    </li>
+<ul>
+```
+```html
+<!-- DO -->
+<ol>
+    <li>...</li>
+    <li>...</li>
+<ol>
+```
+
+
+[Go back to summary](#table-of-contents)
